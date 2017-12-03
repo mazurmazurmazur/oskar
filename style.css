@@ -68,23 +68,25 @@ body {
 
 #menuIcon{
     position: absolute;
-    top: 50%;
-    left: 0%;
-    display: block;
+    top: 50vh;
+    left: 0vw;
     transform: rotate(-90deg);
-    font-size:30px;
+    font-size:3vh;
     cursor:pointer;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-bar {
-    display: block;
-    height: 1px;
-    width: 10em;
-    border: 0;
-    border-top: 1px solid #ccc;
+    position: fixed;
+    height: 30vh;
+    width: 1px;
+    top: 35vh;
+    bottom: 35vh;
+    left: 4vw;
+    border-right: 1px solid #ccc;
     padding: 0;
+    margin: 0;
 }
 
 

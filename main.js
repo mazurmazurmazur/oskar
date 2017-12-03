@@ -1,3 +1,20 @@
+
+
+function getAllPaintings(){
+    fetch("http://mazurmazurmazur.com/wordpress/wp-json/wp/v2/paintings?_embed")
+    .then(res=>res.json())
+    .then(showPaintings)
+}
+
+function getSinglePaintingbyId(myId){
+    fetch("http://mazur.sharemedia.dk/wp-json/wp/v2/events1/"+myId+"?_embed")
+    .then(res=>res.json())
+    .then(showSinglePainting);
+}
+
+
+/////////OVERLAY MENU////////////
+
 var x = document.querySelectorAll(".overlay p, .overlay .sm");
 
 function openNav() {
@@ -14,3 +31,4 @@ function closeNav() {
     x[i].style.color = "rgba(0,0,0, 0.9)";
 }
 }
+////////////////////////////////////
