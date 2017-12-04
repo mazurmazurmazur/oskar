@@ -1,16 +1,37 @@
 
 
 function getAllPaintings(){
-    fetch("http://mazurmazurmazur.com/wordpress/wp-json/wp/v2/paintings?_embed")
+    fetch("http://mazurmazurmazur.com/wordpress/wp-json/wp/v2/paintings")
     .then(res=>res.json())
     .then(showPaintings)
 }
 
-function getSinglePaintingbyId(myId){
-    fetch("http://mazur.sharemedia.dk/wp-json/wp/v2/events1/"+myId+"?_embed")
-    .then(res=>res.json())
-    .then(showSinglePainting);
+function showPaintings(data){
+    console.log(data);
+
 }
+
+
+
+function showPaintings(data){
+let list = document.querySelector("#list");
+let template = document.querySelector("#paintingTemplate").content;
+let clone = template.cloneNode(true);
+data.forEach(function(thePainting){
+    console.log(thePainting);
+    let clone = template.cloneNode(true);
+    let title = clone.querySelector("#paintingTitle #t1");
+    let date = clone.querySelector("#paintingTitle #t2");
+    title.textContent= thePainting.title.rendered;
+    date.textContent= thePainting.acf.date;
+
+    list.appendChild(clone);
+})
+
+list.appendChild(clone);
+}
+
+getAllPaintings();
 
 
 /////////OVERLAY MENU////////////

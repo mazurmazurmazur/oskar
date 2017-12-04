@@ -8,10 +8,30 @@
 </head>
 
 <body>
-       <script src="main.js"></script>
-        <div id="menuIcon"><span onclick="openNav()">MENU</span>
-        </div>
-        <div class="nav-bar"></div>
+    <script src="main.js"></script>
+
+    <h1 class="title">Oskar Dabrowski</h1>
+
+    <section id="list"></section>
+
+    <template id="paintingTemplate">
+        <article class="painting">
+            <div id="paintingTitle"><a id="t1"></a><a id=t2></a></div>
+            <div class="image"><img src="" alt=""><span></span></div>
+            <p class ="price"></p>
+            <p class ="date"></p>
+        </article>
+    </template>
+
+
+
+
+
+    <div id="menuIcon">
+        <span onclick="openNav()">MENU</span>
+    </div>
+    <div class="nav-bar"></div>
+<!--    OVERLAY MENU     -->
 
     <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -30,6 +50,5 @@
         <a class="sm" href="www.facebook.com">FACEBOOK</a>
   </div>
 </div>
-    <script src="main.js"></script>
 </body>
 </html>
