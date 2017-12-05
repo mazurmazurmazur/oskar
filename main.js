@@ -15,19 +15,21 @@ let clone = template.cloneNode(true);
 
 
    // let popImage = clone.getElementById("#popupImg");
-   // popImage.style.backgroundImage = thePainting._embedded["wp:featuredmedia"]["0"].media_details.sizes.large;
+   // popImage.style.backgroundImage = thePainting._embedded["wp:featuredmedia"]["0"].media_details.sizes.large.source_url;
 
 
 
 data.forEach(function(thePainting){
     console.log(thePainting);
     let clone = template.cloneNode(true);
+    let img = clone.querySelector("#popupImg img");
     let title = clone.querySelector("#paintingTitle #t1");
     let date = clone.querySelector("#paintingTitle #t2");
     let popImage = clone.querySelector("#popupImg");
+    let photo = thePainting._embedded["wp:featuredmedia"]["0"].media_details.sizes.large.source_url;
+    img.setAttribute("src", photo);
     title.textContent= thePainting.title.rendered;
     date.textContent= thePainting.acf.date;
-    popImage.style.backgroundColor=thePainting.acf.background_colour;
     list.appendChild(clone);
 })
 
