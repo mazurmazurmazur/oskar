@@ -129,16 +129,17 @@ transition: 0.8s;
     font-weight: 200;
 }
 
-.underline {
-  background-image: linear-gradient(125deg, #d90000 0%, #ff7373 100%);
-  background-size: 100% 0.2em;
-  background-repeat: no-repeat;
-  background-position: 0 88%;
-  transition: background-size 0.2s ease-in;
+#paintingTitle {
+/*    background-image: linear-gradient(125deg, #4286f419 0%, #4286f446 100%);*/
+    background-size: 100% 0;
+    background-repeat: no-repeat;
+    background-position: 0 88%;
+    transition: background-size 0.5s ease-in;
 }
-.underline:hover {
-  background-size: 100% 88%;
+#paintingTitle:hover {
+  background-size: 80% 60%;
 }
+
 
 
 @media screen and (max-height: 450px) {

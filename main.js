@@ -13,14 +13,8 @@ let template = document.querySelector("#paintingTemplate").content;
 let clone = template.cloneNode(true);
 
 
-
-   // let popImage = clone.getElementById("#popupImg");
-   // popImage.style.backgroundImage = thePainting._embedded["wp:featuredmedia"]["0"].media_details.sizes.large.source_url;
-
-
 let counter = 0;
 data.forEach(function(thePainting){
-    console.log(thePainting);
     let clone = template.cloneNode(true);
     let popImage = clone.querySelector(".popupImg");
     let img = clone.querySelector(".popupImg img");
@@ -30,12 +24,11 @@ data.forEach(function(thePainting){
     let photo = thePainting._embedded["wp:featuredmedia"]["0"].media_details.sizes.large.source_url;
     colours.push(thePainting.acf.background_colour);
     img.setAttribute("src", photo);
-    popImage.setAttribute("id", "lol"+counter);
+    popImage.setAttribute("id", "lola"+counter);
     title.textContent= thePainting.title.rendered;
-    titleDiv.setAttribute("class", counter);
+    titleDiv.setAttribute("class", "a"+counter);
     date.textContent= thePainting.acf.date;
     counter = counter + 1;
-    console.log(counter);
     list.appendChild(clone);
 
 })
@@ -49,9 +42,16 @@ getAllPaintings();
 function popImg(obj) {
     let element = document.getElementById("lol"+obj.className);
     let bg = document.getElementById("background");
-    console.log(bg);
+    let underline = document.querySelector("."+obj.className);
     element.style.width="50%";
-    bg.style.backgroundColor= colours[obj.className];
+    bg.style.backgroundColor= colours[obj.className.substr(1,1)];
+    underline.style.backgroundImage = "linear-gradient(125deg, "+colours[obj.className.substr(1,1)] +"19 0%, "+colours[obj.className.substr(1,1)]+ "46 100%)";
+
+    ///#4286f4
+        ////"linear-gradient(125deg, "+colours[obj.className.substr(1,1)] +"19 0%, "+colours[obj.className.substr(1,1)]+ "46 100%)";
+        ////linear-gradient(125deg, #4286f419 0%, #4286f446 100%);
+        ///"linear-gradient(125deg, "+"#4286f4" +"19 0%, "+"#4286f4"+ "46 100%)";
+
 }
 function hideImg(obj) {
     let element = document.getElementById("lol"+obj.className);
