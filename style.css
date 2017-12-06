@@ -71,6 +71,9 @@ body {
     overflow-x: hidden;
   }
 
+  img {
+    width:95vw;
+  }
 
   /* ----------- Mobile Art title "Name" ----------- */
   #t1 {
@@ -156,15 +159,14 @@ and (-webkit-min-device-pixel-ratio: 1) {
   #background {
     position: fixed;
     top: 0px;
-    width: 60%;
-    left: 40%;
+    width: 50%;
+    left: 50%;
     height: 100%;
     background-color: #f9f9f9;
     z-index: -100;
     transition: 0.8s;
   }
 
-  
   /* ----------- Website Title "Oskar Dabrowski" ----------- */
   .title {
     font-size: 36px;
@@ -176,15 +178,19 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
   /* ----------- Image from Wordpress styling----------- */
   .popupImg {
-    top: 0;
+    bottom: 0;
     height: 90%;
     width: 0;
     position: fixed;
     z-index: 15;
     right: 0;
     transition-delay: 3s;
-    transition: 1.3s;
+    transition: all 1.3s ease-in-out;
     overflow-x: hidden;
+  }
+
+  img {
+    width:60vw;
   }
 
   /* ----------- Art title "Name" ----------- */

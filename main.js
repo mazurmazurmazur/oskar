@@ -42,7 +42,7 @@ function popImg(obj) {
   let element = document.getElementById("lol" + obj.className);
   let bg = document.getElementById("background");
   let underline = document.querySelector("." + obj.className);
-  element.style.width = "70%";
+  element.style.width = "60%";
 
 
 
