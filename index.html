@@ -15,21 +15,18 @@
     <h1 class="title">Oskar Dabrowski</h1>
 
     <section id="list"></section>
-    <div id="background">
+    <div id="background"></div>
     <template id="paintingTemplate">
         <article class="painting">
-            <div onmouseover="popImg()" onmouseout="hideImg()" id="paintingTitle"><a id="t1"></a><a id=t2></a></div>
             <br>
 
-            <div id="popupImg"><img src=""></div>
-                <br>
-
-            <div id="paintingTitle" class="underline"><a id="t1"></a>   <a id=t2></a></div>
+            <div name="penisy" class="popupImg"><img src=""></div>
+            <br>
+            <div id="paintingTitle" onmouseover="popImg(this)" onmouseout="hideImg(this)" class="underline"  ><a id="t1"></a><a id=t2></a></div>
         </article>
 
 
     </template>
-  </div>
 
 
 
