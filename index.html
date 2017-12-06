@@ -1,62 +1,58 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <h1 class="title">Oskar Dabrowski</h1>
 
-    <script src="main.js"></script>
+  <div id="menuIcon">
+    <span onclick="openNav()">MENU</span>
+  </div>
+  <div class="nav-bar"></div>
 
-    <h1 class="title">Oskar Dabrowski</h1>
+  <!--    OVERLAY MENU     -->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
 
-    <section id="list"></section>
-    <div id="background"></div>
-    <template id="paintingTemplate">
+    <div id="cont" class="overlay-contact">
+      <p>Oskar Dąbrowski</p>
+      <p>+48 793641999</p>
+      <p>oda.oskardabrowski@gmail.com</p>
+      <br>
+      <a class="sm" href="www.instagram.com">INSTAGRAM</a>
+      <a class="sm" href="www.facebook.com">FACEBOOK</a>
+    </div>
+  </div>
+
+
+  <section id="list"></section>
+  <div id="background"></div>
+  <template id="paintingTemplate">
         <article class="painting">
             <br>
+
 
             <div class="popupImg"><img src=""></div>
             <br>
             <div class="underline" id="paintingTitle" onmouseover="popImg(this)" onmouseout="hideImg(this)"   ><a id="t1"></a><a id=t2></a></div>
         </article>
-
-
     </template>
 
 
-
-
-
-
-
-    <div id="menuIcon">
-        <span onclick="openNav()">MENU</span>
-    </div>
-    <div class="nav-bar"></div>
-<!--    OVERLAY MENU     -->
-
-    <div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="overlay-content">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-  </div>
-    <div id= "cont" class="overlay-contact">
-        <p>OSKAR DĄBROWSKI</p>
-        <p>+48 793641999</p>
-        <p>ODA.OSKARDABROWSKI@GMAIL.COM</p>
-
-        <a class="sm" href="www.instagram.com">INSTAGRAM</a>
-        <a class="sm" href="www.facebook.com">FACEBOOK</a>
-  </div>
-</div>
-
+  <script src="main.js"></script>
 </body>
+
 </html>
