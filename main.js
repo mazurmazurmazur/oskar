@@ -15,9 +15,23 @@ function showPaintings(data) {
   let template = document.querySelector("#paintingTemplate").content;
   let clone = template.cloneNode(true);
 
-  if (mq.matches) {} else {
-    menuIcon.textContent = "&#9776";
+
+
+ ////////////MENU ICONS/////////////
+    window.onresize = function(){
+  if (mq.matches) {
+    menuIcon.innerHTML = "MENU";
+  } else {
+    menuIcon.innerHTML = "&#9776";
+  }}
+
+        if (mq.matches) {
+    menuIcon.innerHTML = "MENU";
+  } else {
+    menuIcon.innerHTML = "&#9776";
   }
+
+/////////////////////////////////////////
 
   let counter = 0;
   data.forEach(function(thePainting) {
