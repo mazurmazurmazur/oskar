@@ -14,13 +14,36 @@ function showAbout(json){
     console.log(json);
     let img = document.querySelector("#aboutIMG");
     let excerpt = document.querySelector("#description");
+    let bga = document.querySelector("#background2");
     img.setAttribute("src", json._embedded["wp:featuredmedia"]["0"].media_details.sizes.full.source_url);
     excerpt.innerHTML = json.excerpt.rendered;
+    bga.style.backgroundColor = json.acf.colour;
+
 
 }
 
 
 getAbout();
+
+
+///////////MENU ICONS//////////////
+
+    window.onresize = function(){
+  if (mq.matches) {
+    menuIcon.innerHTML = "MENU";
+  } else {
+    menuIcon.innerHTML = "&#9776";
+  }}
+
+        if (mq.matches) {
+    menuIcon.innerHTML = "MENU";
+  } else {
+    menuIcon.innerHTML = "&#9776";
+  }
+
+
+
+///////////////////////////////////
 
 
 /////////OVERLAY MENU////////////
