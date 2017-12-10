@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="">
 
@@ -12,18 +11,14 @@
 <body>
 
   <h1 class="title">Oskar Dabrowski</h1>
-
-
   <form class="contactForm">
     <input id="name" type="text" placeholder="NAME">
     <input id="email" type="text" placeholder="E-MAIL">
     <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
   <input id="submit" type="submit" value="Send!">
 
-  </form>
-
   <div id="menuIcon">
-    <span onclick="openNav()">MENU</span>
+    <span id = "menuSpan" onclick="openNav()">MENU</span>
   </div>
   <div class="nav-bar"></div>
 
@@ -34,7 +29,7 @@
       <a href="/about.html">About</a>
       <a href="#">Services</a>
       <a href="#">Clients</a>
-      <a href="#">Contact</a>
+      <a href="/contact.html">Contact</a>
     </div>
 
     <div id="cont" class="overlay-contact">
@@ -50,8 +45,19 @@
 
   <!-- <section id="list"></section> -->
   <div id="background2"></div>
-  <img class="aboutIMG" src="about.jpg" />
-  <script src="main.js"></script>
+  <img id="aboutIMG" src="about.jpg" />
+ <!-- <template id="paintingTemplate">
+        <article class="painting">
+            <br>
+
+           <div class="popupImg"><img src=""></div>
+            <br>
+
+        </article>
+    </template> -->
+
+
+  <script src="mainAbout.js"></script>
 </body>
 
 </html>
