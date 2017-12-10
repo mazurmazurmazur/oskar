@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1 class="title">Oskar Dabrowski</h1>
+
+
+  <form class="contactForm">
+    <input id="name" type="text" placeholder="NAME">
+    <input id="email" type="text" placeholder="E-MAIL">
+    <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+  <input id="submit" type="submit" value="Send!">
+
+  </form>
+
+  <div id="menuIcon">
+    <span onclick="openNav()">MENU</span>
+  </div>
+  <div class="nav-bar"></div>
+
+  <!--    OVERLAY MENU     -->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="/about.html">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div id="cont" class="overlay-contact">
+      <p>Oskar Dąbrowski</p>
+      <p>+48 793641999</p>
+      <p>oda.oskardabrowski@gmail.com</p>
+      <br>
+      <a class="sm" href="www.instagram.com">INSTAGRAM</a>
+      <a class="sm" href="www.facebook.com">FACEBOOK</a>
+    </div>
+  </div>
+
+
+  <!-- <section id="list"></section> -->
+  <div id="background2"></div>
+  <img class="aboutIMG" src="about.jpg" />
+  <script src="main.js"></script>
+</body>
+
+</html>
