@@ -5,7 +5,7 @@ function getAllPaintings() {
 }
 
 var colours = [];
-const mq = window.matchMedia( "(min-width: 800px)" );
+const mq = window.matchMedia("(min-width: 800px)");
 
 let menuIcon = document.getElementById("menuSpan");
 
@@ -15,10 +15,9 @@ function showPaintings(data) {
   let template = document.querySelector("#paintingTemplate").content;
   let clone = template.cloneNode(true);
 
-if(mq.matches){}
-      else{
-          menuIcon.textContent = "&#9776";
-      }
+  if (mq.matches) {} else {
+    menuIcon.textContent = "&#9776";
+  }
 
   let counter = 0;
   data.forEach(function(thePainting) {
@@ -48,17 +47,18 @@ getAllPaintings();
 
 
 function popImg(obj) {
-    if(mq.matches){           //////indicator that screen is 800px+
-  let element = document.getElementById("lol" + obj.className);
-  let bg = document.getElementById("background");
-  let underline = document.querySelector("." + obj.className);
+  if (mq.matches) { //////indicator that screen is 800px+
+    let element = document.getElementById("lol" + obj.className);
+    let bg = document.getElementById("background");
+    let underline = document.querySelector("." + obj.className);
 
-  element.style.width = "60%";
+    element.style.width = "60%";
 
 
 
-  bg.style.backgroundColor = colours[obj.className.substr(1, 1)];
-  underline.style.backgroundImage = "linear-gradient(125deg, " + colours[obj.className.substr(1, 1)] + "19 0%, " + colours[obj.className.substr(1, 1)] + "46 100%)";}
+    bg.style.backgroundColor = colours[obj.className.substr(1, 1)];
+    underline.style.backgroundImage = "linear-gradient(125deg, " + colours[obj.className.substr(1, 1)] + "19 0%, " + colours[obj.className.substr(1, 1)] + "46 100%)";
+  }
 
 }
 
