@@ -385,3 +385,8 @@ and (-webkit-min-device-pixel-ratio: 1) {
   overflow-x: hidden;
   transition: 0.5s;
 }
+
+#logoIndex{
+    text-decoration: none;
+    color: black;
+}
