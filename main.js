@@ -64,7 +64,7 @@ function popAtStart(){
             let bg = document.getElementById("background");
             let underline2 = document.querySelector(".a0");
             bg.style.backgroundColor = colours[0];
-            underline2.style.backgroundImage = "linear-gradient(125deg, " + colours[0] + "19 0%, " + colours[0] + "46 100%)";
+            underline2.style.backgroundColor = colours[0]+"59";
             eee.style.width="60%";
       }
 
@@ -77,8 +77,10 @@ function popImg(obj) {
 
     document.getElementById("bd").setAttribute("onmousemove", ""); ////////
     let starter = document.getElementById("lola0");                ////////GETS RID OF IMAGE
+    let starterUnderline = document.querySelector(".a0");
     if(starter.style.width=="60%"){                                 ///////LOADING AT START
         starter.style.width="0";                                   ////////
+        starterUnderline.style.backgroundColor = "transparent";
     }
 
 
@@ -95,9 +97,9 @@ function popImg(obj) {
 
 function hideImg(obj) {
       if (mq.matches) { //////indicator that screen is 800px+
+        let element = document.getElementById("lol" + obj.className);
 
-  let element = document.getElementById("lol" + obj.className);
-  element.style.width = "0";
+        element.style.width = "0";
       }
 
 }
