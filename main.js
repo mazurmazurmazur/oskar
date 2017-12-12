@@ -61,12 +61,15 @@ getAllPaintings();
 
 
 function popAtStart(){
-    let eee = document.getElementById("lola0");
-    let bg = document.getElementById("background");
-    let underline2 = document.querySelector(".a0");
-    bg.style.backgroundColor = colours[0];
-    underline2.style.backgroundImage = "linear-gradient(125deg, " + colours[0] + "19 0%, " + colours[0] + "46 100%)";
-    eee.style.width="60%";
+      if (mq.matches) { //////indicator that screen is 800px+
+            let eee = document.getElementById("lola0");
+            let bg = document.getElementById("background");
+            let underline2 = document.querySelector(".a0");
+            bg.style.backgroundColor = colours[0];
+            underline2.style.backgroundImage = "linear-gradient(125deg, " + colours[0] + "19 0%, " + colours[0] + "46 100%)";
+            eee.style.width="60%";
+      }
+
 }
 
 function popImg(obj) {
@@ -93,8 +96,12 @@ function popImg(obj) {
 }
 
 function hideImg(obj) {
+      if (mq.matches) { //////indicator that screen is 800px+
+
   let element = document.getElementById("lol" + obj.className);
   element.style.width = "0";
+      }
+
 }
 
 /////////OVERLAY MENU////////////
