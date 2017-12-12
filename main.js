@@ -63,15 +63,25 @@ getAllPaintings();
 function popAtStart(){
     let eee = document.getElementById("lola0");
     let bg = document.getElementById("background");
-    let underline = document.querySelector(".a0");
+    let underline2 = document.querySelector(".a0");
     bg.style.backgroundColor = colours[0];
-    underline.style.backgroundImage = "linear-gradient(125deg, " + colours[1] + "19 0%, " + colours[1] + "46 100%)";
+    underline2.style.backgroundImage = "linear-gradient(125deg, " + colours[0] + "19 0%, " + colours[0] + "46 100%)";
     eee.style.width="60%";
 }
 
 function popImg(obj) {
   if (mq.matches) { //////indicator that screen is 800px+
-    document.getElementById("bd").setAttribute("onmousemove", "");
+
+
+
+    document.getElementById("bd").setAttribute("onmousemove", ""); ////////
+    let starter = document.getElementById("lola0");                ////////GETS RID OF IMAGE
+    if(starter.style.width=="60%"){                                 ///////LOADING AT START
+        starter.style.width="0";                                   ////////
+    }
+
+
+
     let element = document.getElementById("lol" + obj.className);
     let bg = document.getElementById("background");
     let underline = document.querySelector("." + obj.className);
