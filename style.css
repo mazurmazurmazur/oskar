@@ -177,6 +177,7 @@ body {
   font-weight: 200;
   line-height: 36px;
   text-align: center;
+  padding-bottom: 6vw;
 }
 .seeMore {
   display: none;
@@ -217,18 +218,19 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
   /* ----------- H2 "Recent Projects"/"See More" ----------- */
 .recentProject{
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 200;
   line-height: 36px;
-  padding-left: 6%;
+  padding-left: 16%;
   padding-top: 2%;
+  padding-bottom: 1%;
 }
 .seeMore {
   font-size: 22px;
   font-weight: 200;
   line-height: 36px;
   padding-left: 17%;
-  padding-top: 0%;
+  padding-top: 0;
   text-decoration: none;
   color:black;
 }

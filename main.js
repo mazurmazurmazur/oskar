@@ -53,8 +53,6 @@ function showPaintings(data) {
     list.appendChild(clone);
 
   })
-
-  list.appendChild(clone);
 }
 
 getAllPaintings();
