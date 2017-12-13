@@ -63,8 +63,8 @@ function popAtStart(){
             let eee = document.getElementById("lola0");
             let bg = document.getElementById("background");
             let underline2 = document.querySelector(".a0");
-            bg.style.backgroundColor = colours[0];
-            underline2.style.backgroundColor = colours[0]+"59";
+            bg.style.backgroundColor = colours[0]+"33";
+            underline2.style.backgroundColor = colours[0]+"19";
             eee.style.width="60%";
       }
 
@@ -96,20 +96,17 @@ function popImg(obj) {
     let bg = document.getElementById("background");
     let underline = document.querySelector("." + obj.className);
     element.style.width = "60%";
-    bg.style.backgroundColor = colours[obj.className.substr(1, 1)];
+    bg.style.backgroundColor = colours[obj.className.substr(1, 1)]+"33";
     underline.style.backgroundImage = "linear-gradient(125deg, " + colours[obj.className.substr(1, 1)] + "19 0%, " + colours[obj.className.substr(1, 1)] + "46 100%)";
   }
 
 }
 
+function showFull(obj){
+    if(mq.matches){ //////indicator that screen is 800px+
 
 
-function hideImg(obj) {
-      if (mq.matches) { //////indicator that screen is 800px+
-        let element = document.getElementById("lol" + obj.className);
-
-      }
-
+    }
 }
 
 /////////OVERLAY MENU////////////
