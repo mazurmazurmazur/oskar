@@ -16,7 +16,7 @@ function showAbout(json){
     let excerpt = document.querySelector("#description");
     let bga = document.querySelector("#background2");
     img.setAttribute("src", json._embedded["wp:featuredmedia"]["0"].media_details.sizes.full.source_url);
-    excerpt.innerHTML = json.excerpt.rendered;
+    excerpt.innerHTML = json.content.rendered;
     bga.style.backgroundColor = json.acf.colour;
 
 

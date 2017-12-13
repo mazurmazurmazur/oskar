@@ -58,25 +58,58 @@ function showPaintings(data) {
 getAllPaintings();
 
 
+function popAtStart(){
+      if (mq.matches) { //////indicator that screen is 800px+
+            let eee = document.getElementById("lola0");
+            let bg = document.getElementById("background");
+            let underline2 = document.querySelector(".a0");
+            bg.style.backgroundColor = colours[0];
+            underline2.style.backgroundColor = colours[0]+"59";
+            eee.style.width="60%";
+      }
+
+}
+
 function popImg(obj) {
   if (mq.matches) { //////indicator that screen is 800px+
+
+
+
+    document.getElementById("bd").setAttribute("onmousemove", "");
+    let starterUnderline = document.querySelector(".a0");
+      if(starterUnderline.style.backgroundColor != ""){
+          starterUnderline.style.backgroundColor = "";
+      }
+
+        for(i = 0; i < 11; i++){
+            let temp = document.getElementById("lola"+i);
+            if(temp!= null && temp.style.width=="60%")
+            {
+                temp.style.width="0";
+            }
+        }
+
+
+
+
     let element = document.getElementById("lol" + obj.className);
     let bg = document.getElementById("background");
     let underline = document.querySelector("." + obj.className);
-
     element.style.width = "60%";
-
-
-
     bg.style.backgroundColor = colours[obj.className.substr(1, 1)];
     underline.style.backgroundImage = "linear-gradient(125deg, " + colours[obj.className.substr(1, 1)] + "19 0%, " + colours[obj.className.substr(1, 1)] + "46 100%)";
   }
 
 }
 
+
+
 function hideImg(obj) {
-  let element = document.getElementById("lol" + obj.className);
-  element.style.width = "0";
+      if (mq.matches) { //////indicator that screen is 800px+
+        let element = document.getElementById("lol" + obj.className);
+
+      }
+
 }
 
 /////////OVERLAY MENU////////////
