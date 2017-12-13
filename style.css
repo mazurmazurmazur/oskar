@@ -23,7 +23,6 @@ body {
 }
 
 
-
 /* ----------- Mobile Screens -----------*/
 
 @media screen and (max-width: 812px) {
@@ -450,3 +449,38 @@ and (-webkit-min-device-pixel-ratio: 1) {
     text-decoration: none;
     color: black;
 }
+
+/* ----------- Gallery Grid Mobile ----------- */
+
+.wrapper{
+    margin: 2% 5% 2% 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* ----------- Gallery Grid Desktop ----------- */
+
+@media screen and (min-width: 815px){
+
+.wrapper {
+    margin: 5% 15% 5% 15%;
+    display: grid;
+  grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+      "col col";
+}
+
+
+}
+
+
+
+
+
