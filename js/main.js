@@ -44,6 +44,7 @@ function showPaintings(data) {
     let photo = thePainting._embedded["wp:featuredmedia"]["0"].media_details.sizes.large.source_url;
     colours.push(thePainting.acf.background_colour); //adding color to array to fetch it when needed
     img.setAttribute("src", photo);
+    img.setAttribute("id", "imgIda"+counter)
     popImage.setAttribute("id", "lola" + counter);
     title.textContent = thePainting.title.rendered;
     titleDiv.setAttribute("class", "a" + counter);
@@ -56,6 +57,62 @@ function showPaintings(data) {
 }
 
 getAllPaintings();
+
+
+
+function showFull(obj){ ////////IT HAPPENS AFTER CLICKING AT ONE OF THE TITLES
+    if(mq.matches){ //////indicator that screen is 800px+
+
+
+                let sf = document.querySelector("#imgId"+obj.className);
+                let sf0 = document.querySelector("#lol"+obj.className);
+                let sf1 = document.querySelector(".seeMore");
+                let sf2 = document.querySelector(".recentProject");
+                let sf3 = document.querySelector(".title");
+                let sf4 = document.querySelector("#arrow");
+
+
+                sf0.style.width = "80vw";
+                sf.style.width = "80vw";
+
+
+                sf1.style.transition = "opacity 1s";
+                sf1.style.opacity= "0";
+                sf2.style.transition = "opacity 1s";
+                sf2.style.opacity= "0";
+                sf3.style.fontSize = "25px";
+                sf4.style.height= "auto";
+                sf4.style.opacity= "1";
+
+
+
+                setTimeout(function()
+                           {
+                                sf1.style.display="none";
+                                sf2.style.display="none";
+                            }, 1000)
+
+                for(i = 0; i < 11; i++){
+                    let temp = document.querySelector(".a"+i);
+                    if(temp!= null)
+                    {
+                        temp.style.transition = "opacity 1s";
+                        temp.style.opacity= "0";
+                        temp.setAttribute("onmouseover", "");
+                        setTimeout(function(){
+                            temp.style.display="none";
+                        }, 1000)
+
+                    }
+        }
+
+
+
+
+
+    }
+}
+
 
 
 function popAtStart(){
@@ -102,12 +159,7 @@ function popImg(obj) {
 
 }
 
-function showFull(obj){
-    if(mq.matches){ //////indicator that screen is 800px+
 
-
-    }
-}
 
 /////////OVERLAY MENU////////////
 
