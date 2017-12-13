@@ -75,13 +75,20 @@ function popImg(obj) {
 
 
 
-    document.getElementById("bd").setAttribute("onmousemove", ""); ////////
-    let starter = document.getElementById("lola0");                ////////GETS RID OF IMAGE
+    document.getElementById("bd").setAttribute("onmousemove", "");
     let starterUnderline = document.querySelector(".a0");
-    if(starter.style.width=="60%"){                                 ///////LOADING AT START
-        starter.style.width="0";                                   ////////
-        starterUnderline.style.backgroundColor = "transparent";
-    }
+      if(starterUnderline.style.backgroundColor != ""){
+          starterUnderline.style.backgroundColor = "";
+      }
+
+        for(i = 0; i < 11; i++){
+            let temp = document.getElementById("lola"+i);
+            if(temp!= null && temp.style.width=="60%")
+            {
+                temp.style.width="0";
+            }
+        }
+
 
 
 
@@ -95,11 +102,12 @@ function popImg(obj) {
 
 }
 
+
+
 function hideImg(obj) {
       if (mq.matches) { //////indicator that screen is 800px+
         let element = document.getElementById("lol" + obj.className);
 
-        element.style.width = "0";
       }
 
 }
