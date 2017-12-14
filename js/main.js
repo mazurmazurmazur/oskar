@@ -13,11 +13,8 @@ let menuIcon = document.getElementById("menuSpan");
 
 
 
-
-
-
-
 function showPaintings(data) {
+    console.log(data);
   let list = document.querySelector("#list");
   let template = document.querySelector("#paintingTemplate").content;
   let clone = template.cloneNode(true);
@@ -159,8 +156,7 @@ function collapseImg(obj){
                             temp.style.display="";
                             temp.style.opacity= "1";
                             temp.setAttribute("onmouseover", "popImg(this)");
-                            temp.style.transition = "background-size 0.5s ease-in"
-                        }
+                            temp.style.transition = "background-size 0.5s ease-in"                        }
                     }
 
 
