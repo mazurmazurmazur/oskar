@@ -88,10 +88,6 @@ function hideOtherYears(year){
      for(i = 0; i < a2013.length; i++) {
     a2013[i].style.display = "none";
 }
-      for(i = 0; i < a2015.length; i++) {
-    a2015[i].style.display = "none";
-}
-    console.log(year[0]);
 
 }
 
