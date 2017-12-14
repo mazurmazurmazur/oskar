@@ -145,6 +145,7 @@ function collapseImg(obj){
                 sf1.style.opacity= "1";
                 sf2.style.opacity= "1";
                 sf3.style.fontSize = "36px";
+                sf4.style.transition= "opacity 0.5s";
                 sf4.style.opacity= "0";
 
                 setTimeout(function(){
@@ -158,7 +159,7 @@ function collapseImg(obj){
                             temp.style.display="";
                             temp.style.opacity= "1";
                             temp.setAttribute("onmouseover", "popImg(this)");
-
+                            temp.style.transition = "background-size 0.5s ease-in"
                         }
                     }
 

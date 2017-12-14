@@ -449,6 +449,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
     opacity: 0;
     height: 0;
     overflow: hidden;
+    cursor: pointer;
 }
 
 /* ---------------- END OF MEDIA QUERIES --------------------*/
