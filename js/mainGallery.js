@@ -5,6 +5,7 @@ var years = [];
  let a2018;
  let a2017;
  let a2016;
+ let a2015;
  let a2014;
  let a2013;
 
@@ -57,6 +58,7 @@ getAllPaintings();
             a2018 = document.querySelectorAll(".a2018");
             a2017 = document.querySelectorAll(".a2017");
             a2016 = document.querySelectorAll(".a2016");
+            a2015 = document.querySelectorAll(".a2016");
             a2014 = document.querySelectorAll(".a2014");
             a2013 = document.querySelectorAll(".a2013");
 
@@ -86,6 +88,10 @@ function hideOtherYears(year){
      for(i = 0; i < a2013.length; i++) {
     a2013[i].style.display = "none";
 }
+      for(i = 0; i < a2015.length; i++) {
+    a2015[i].style.display = "none";
+}
+    console.log(year[0]);
 
 }
 
