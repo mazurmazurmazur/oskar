@@ -10,12 +10,17 @@ const mq = window.matchMedia("(min-width: 800px)");
 let menuIcon = document.getElementById("menuSpan");
 
 
+
+
+
+
+
+
+
 function showPaintings(data) {
   let list = document.querySelector("#list");
   let template = document.querySelector("#paintingTemplate").content;
   let clone = template.cloneNode(true);
-
-
 
  ////////////MENU ICONS/////////////
     window.onresize = function(){
@@ -56,7 +61,14 @@ function showPaintings(data) {
   })
 }
 
+
+
+
+
 getAllPaintings();
+
+
+
 
 
 
@@ -83,14 +95,14 @@ function showFull(obj){ ////////IT HAPPENS AFTER CLICKING AT ONE OF THE TITLES
                 sf3.style.fontSize = "25px";
                 sf4.style.height= "auto";
                 sf4.style.opacity= "1";
-
+                sf4.addEventListener("click", collapseImg(obj.className));
 
 
                 setTimeout(function()
                            {
                                 sf1.style.display="none";
                                 sf2.style.display="none";
-                            }, 1000)
+                            }, 1000);
 
                 for(i = 0; i < 11; i++){
                     let temp = document.querySelector(".a"+i);
@@ -105,13 +117,57 @@ function showFull(obj){ ////////IT HAPPENS AFTER CLICKING AT ONE OF THE TITLES
 
                     }
         }
+    }}
 
 
 
 
 
-    }
+//////////////////////////////////////////////////////////////////////
+///////////////COLLAPSE MAXIMIZED(by showFull()) IMAGE////////////////
+
+function collapseImg(obj){
+
+    return function(){
+                let sf = document.querySelector("#imgId"+obj);
+                let sf0 = document.querySelector("#lol"+obj);
+                let sf1 = document.querySelector(".seeMore");
+                let sf2 = document.querySelector(".recentProject");
+                let sf3 = document.querySelector(".title");
+                let sf4 = document.querySelector("#arrow");
+                let sf5 = document.querySelector("#arrowDiv");
+
+                sf0.style.width = "60%";
+                sf.style.width = "60vw";
+
+                sf1.style.display="";
+                sf2.style.display="";
+                sf1.style.opacity= "1";
+                sf2.style.opacity= "1";
+                sf3.style.fontSize = "36px";
+                sf4.style.opacity= "0";
+
+                setTimeout(function(){
+                    sf4.style.height= "0";
+                                    }, 2000);
+
+                    for(i = 0; i < 11; i++){
+                        let temp = document.querySelector(".a"+i);
+                        if(temp!= null)
+                        {
+                            temp.style.display="";
+                            temp.style.opacity= "1";
+                            temp.setAttribute("onmouseover", "popImg(this)");
+
+                        }
+                    }
+
+
+    };
+
 }
+
+
 
 
 
@@ -127,10 +183,12 @@ function popAtStart(){
 
 }
 
+
+
+
+
 function popImg(obj) {
   if (mq.matches) { //////indicator that screen is 800px+
-
-
 
     document.getElementById("bd").setAttribute("onmousemove", "");
     let starterUnderline = document.querySelector(".a0");
@@ -145,10 +203,7 @@ function popImg(obj) {
                 temp.style.width="0";
             }
         }
-
-
-
-
+      console.log(obj.className);
     let element = document.getElementById("lol" + obj.className);
     let bg = document.getElementById("background");
     let underline = document.querySelector("." + obj.className);
@@ -157,7 +212,11 @@ function popImg(obj) {
     underline.style.backgroundImage = "linear-gradient(125deg, " + colours[obj.className.substr(1, 1)] + "19 0%, " + colours[obj.className.substr(1, 1)] + "46 100%)";
   }
 
+
 }
+
+
+
 
 
 
