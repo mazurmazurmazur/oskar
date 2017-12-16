@@ -142,10 +142,29 @@ body {
     color: darkgray;
   }
 
-  #aboutIMG {
-    display: none;
+  /* ----------- Mobile About img/text ----------- */
 
+  #aboutIMG {
+  display: none;
   }
+
+  #description {
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+      font-weight: 200;
+      padding-left: 5vw;
+      padding-top: 10%;
+      padding-bottom: 10%;
+      padding-right: 5vw;
+  }
+
+  /* #descriptionIMG {
+      width: 80vw;
+      height: auto;
+      left: 11%;
+      position: relative;
+  } */
+
   /* ----------- Contact Form ----------- */
 
 .contactForm {
@@ -403,7 +422,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
     left: 45%;
     top:8%;
     position: absolute;
-
   }
   /* ----------- Contact Form ----------- */
 
@@ -544,11 +562,3 @@ and (-webkit-min-device-pixel-ratio: 1) {
     text-decoration: none;
     color: black;
 }
-
-
-
-
-
-
-
-
