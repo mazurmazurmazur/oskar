@@ -192,6 +192,15 @@ body {
     resize: vertical;
   }
 
+/* ----------- Mobile Gallery ----------- */
+
+    h2[id*=button20]{
+        display: inline-block;
+        font-size: 0.8em;
+        margin-left: 1.38em;
+        padding: 1em 0.1em;
+    }
+
   /* ----------- Mobile H2 "Recent Projects"/"See More" ----------- */
 .recentProject{
   font-size: 24px;
