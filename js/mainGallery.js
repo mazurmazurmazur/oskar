@@ -58,13 +58,14 @@ getAllPaintings();
             a2018 = document.querySelectorAll(".a2018");
             a2017 = document.querySelectorAll(".a2017");
             a2016 = document.querySelectorAll(".a2016");
-            a2015 = document.querySelectorAll(".a2016");
+            a2015 = document.querySelectorAll(".a2015");
             a2014 = document.querySelectorAll(".a2014");
             a2013 = document.querySelectorAll(".a2013");
 
     }
 
 function hideOtherYears(year){
+
 
 
     for(i = 0; i < a2020.length; i++) {
@@ -82,16 +83,20 @@ function hideOtherYears(year){
      for(i = 0; i < a2016.length; i++) {
     a2016[i].style.display = "none";
 }
+         for(i = 0; i < a2015.length; i++) {
+    a2015[i].style.display = "none";}
+
      for(i = 0; i < a2014.length; i++) {
     a2014[i].style.display = "none";
 }
      for(i = 0; i < a2013.length; i++) {
     a2013[i].style.display = "none";
 }
-      for(i = 0; i < a2015.length; i++) {
-    a2015[i].style.display = "none";
+
+
+    for(i = 0; i < year.length; i++) {
+    year[i].style.display = "";
 }
-    console.log(year[0]);
 
 }
 
