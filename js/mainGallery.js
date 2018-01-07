@@ -8,6 +8,34 @@ var years = [];
  let a2015;
  let a2014;
  let a2013;
+const mq = window.matchMedia("(min-width: 800px)");
+let menuIcon = document.getElementById("menuSpan");
+
+
+
+///////////MENU ICONS//////////////
+
+    window.onresize = function(){
+  if (mq.matches) {
+    menuIcon.innerHTML = "MENU";
+  } else {
+    menuIcon.innerHTML = "&#9776";
+  }}
+
+        if (mq.matches) {
+    menuIcon.innerHTML = "MENU";
+  } else {
+    menuIcon.innerHTML = "&#9776";
+  }
+
+
+
+///////////////////////////////////
+
+
+
+
+
 
 function getAllPaintings() {
   fetch("http://oskar.sharemedia.dk/wp-json/wp/v2/works?_embed&per_page=50")
